@@ -3,9 +3,11 @@ import { redact, stripPrivateBlocks, hasPrivateBlocks } from '../../src/util/sec
 import { isEntirelyPrivate as captureIsPrivate } from '../../src/capture/privateTags.js'
 describe('secretRedact', () => {
   it('redacts long API-key-like strings', () => {
-    const text = 'token: tok_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    // uses a synthetic 45-char token — not a real credential
+    const fakeToken = 'tok_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    const text = `token: ${fakeToken}`
     const result = redact(text)
-    expect(result).not.toContain('tok_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+    expect(result).not.toContain(fakeToken)
     expect(result).toContain('[REDACTED]')
   })
 
