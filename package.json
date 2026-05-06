@@ -1,0 +1,28 @@
+{
+  "name": "unified-memory",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "umem": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsx src/cli/index.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "latest",
+    "commander": "latest",
+    "gray-matter": "latest",
+    "simple-git": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "latest",
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}

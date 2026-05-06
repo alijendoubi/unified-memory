@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.memory/index/
+.memory/sessions/
+*.db
+*.sqlite
+.DS_Store
