@@ -1,0 +1,12 @@
+<!-- unified-memory start -->
+## Memory
+
+This project uses unified-memory for persistent context across sessions.
+
+- On session start: read MEMORY.md and .memory/CONTINUATION.md if present
+- On session end: update MEMORY.md with decisions, blockers, active work, and where we left off
+- Run `umem doctor` to check memory health
+- Run `umem compact` to compress memory when it grows large
+- Never store secrets, passwords, tokens, or API keys in memory files
+- Strip <private>...</private> blocks before persisting anything
+<!-- unified-memory end -->
