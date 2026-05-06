@@ -1,6 +1,6 @@
 <div align="center">
 
-# unified-memory
+# unified-memory for Claude and Claude Code
 
 **Persistent, searchable memory across every Claude and Claude Code session.**
 
